@@ -1,0 +1,30 @@
+user:scott
+paswordd:sifo
+1)create interface gestion des notes de chack module avec 
+  des étudient nom de chack module avec voter group.
+
+create table groupe(
+                  group_id INT PRIMARY KEY,
+                  libele varchar(20)
+);
+create table etudient(
+                  etud_id INT PRIMARY KEY,
+                  name varchar(20),
+                  group_id INT,
+                  FOREIGN KEY (group_id) REFERENCES groupe(group_id)
+);
+create table module(
+                  module_id INT PRIMARY KEY,
+                  libele varchar(20)
+                  
+);
+create table note(
+                  note_id INT PRIMARY KEY,
+                  note INT,
+                  group_id INT,
+                  FOREIGN KEY (group_id) REFERENCES groupe(group_id),
+                  module_id INT,
+                  FOREIGN KEY (module_id) REFERENCES module(module_id),
+                  etud_id INT,
+                  FOREIGN KEY (etud_id) REFERENCES etudient(etud_id)
+);

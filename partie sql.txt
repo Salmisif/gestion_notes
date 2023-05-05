@@ -1,0 +1,44 @@
+
+
+create table article(
+           RA           int AUTO_INCREMENT,
+           NomArticle   varchar(20) NOT NULL,
+           Quantity     int  NOT NULL,
+           PrixVent     DECIMAL(10,2) NOT NULL,
+           PRIMARY KEY(RA)
+                    );
+
+create table lignefacture(
+           RA              int          ,
+           NF              int          ,
+           QuantityVend     int  ,
+           FOREIGN KEY (RA) REFERENCES article(RA) ,
+           FOREIGN KEY (NF) REFERENCES Facture(NF) 
+                    );
+create table Facture(
+           NF          int AUTO_INCREMENT,
+           DateFacture   Date not null,
+           Mode_paiement      varchar(40),
+           Id_Client          int  Foreign Key References Client(Id_Client) ,
+           PRIMARY KEY(NF) 
+                    );
+create table Client(
+           Id_Client          int AUTO_INCREMENT,
+           NomClient  varchar(20),
+           phone      varchar(20),
+           email      varchar(20),
+           PRIMARY KEY(Id_Client)
+                    );
+
+
+
+DELIMITER $
+create TRIGGER INSERTFACTUER AFTER INSERT
+ON lignefacture  
+for each row
+begin
+UPDATE article
+SET Quantity=Quantity-(SELECT QuantityVend FROM lignefacture )
+WHERE RA in (SELECT RA FROM lignefacture)
+end ;
+DELIMITER ;

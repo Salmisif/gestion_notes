@@ -1,0 +1,172 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 déc. 2022, 18:52:50
+    Author     : HP
+*/
+
+body {
+    font-family: "Lato", sans-serif;
+
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(32, 32, 32);
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: #333;
+}
+
+form {
+    width: 80%;
+    padding: 30px;
+    border: none;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    margin-top: 0;
+    margin-right: 100px;
+    z-index: 0;
+}
+
+input[type="text"],
+input[type="password"] {
+    background-color: #fff9f9;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #e10000;
+}
+
+input[type="submit"] {
+    background-color: #ff2020;
+    color: white;
+    font-size: 18px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 13%;
+    border-radius: 30px;
+}
+
+input[type="submit1"] {
+    background-color: #ff2020;
+    color: white;
+    font-size: 18px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    border-radius: 30px;
+}
+
+#ab {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 0%;
+}
+
+#submit1 {
+    width: 50%;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+    color: #e90000;
+    /*  border: 1px solid #e90000; */
+    border-radius: 20px;
+    width: 13%;
+    padding: 14px 20px;
+    margin: 8px 0;
+}
+
+input[type="submit1"]:hover {
+    background-color: white;
+    color: #e90000;
+    /*  border: 1px solid #e90000; */
+    border-radius: 20px;
+    width: 30%;
+    padding: 14px 20px;
+    margin: 8px 0;
+}
+
+.main {
+    margin-left: 160px;
+    /* Same as the width of the sidenav */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/* Add a black background color to the top navigation */
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.dd{
+    margin-top: 50px;
+    margin-left: 300px 
+}
+
+/* Change the color of links on hover 
+
+.topnav a:hover {
+    background-color: rgb(55, 109, 255);
+    color: black;
+}
+
+
+/* Add a color to the active/current link */
